@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="card" style="width: 30rem; height: 22rem;">
+            <div class="card-body">
+                <div class="d-flex justify-content-center">
+                    <h5 class="card-title">Login</h5>
+                </div>
+                <div>
+                    <form [formGroup]="formLogin" (ngSubmit)="ingresar()">
+                        <div class="form-group text-center mt-4">
+                            <label for="user">Usuario</label>
+                            <input type="text" class="form-control" formControlName="user">
+                        </div>
+                        <div class="form-group text-center mt-4">
+                            <label for="password">Contaseña</label>
+                            <input type="text" class="form-control" formControlName="password">
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-primary" [disabled]="formLogin.invalid" type="submit">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
